@@ -9,19 +9,21 @@
 
 <h2>🎵 Music Playing...</h2>
 
-<audio id="audio" loop>
-  <source src="indrakilla.mp3" type="audio/mpeg">
+<audio id="music" loop>
+<source src="indrakilla.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-var audio = document.getElementById("audio");
+var music = document.getElementById("music");
 
-function playAudio(){
-    audio.play();
+function playMusic(){
+    music.play().catch(function(){});
 }
 
-playAudio();
-document.body.addEventListener("click", playAudio);
+playMusic();
+
+document.addEventListener("click", playMusic);
+document.addEventListener("touchstart", playMusic);
 </script>
 
 </body>
