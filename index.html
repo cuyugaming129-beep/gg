@@ -7,7 +7,7 @@
 
 <body style="background:black;color:white;text-align:center;margin-top:120px;font-family:sans-serif;">
 
-<h2>🎵 Music Playing...</h2>
+<h2>🎵 Tap Screen</h2>
 
 <audio id="music" loop>
 <source src="indrakilla.mp3" type="audio/mpeg">
@@ -16,14 +16,9 @@
 <script>
 var music = document.getElementById("music");
 
-function playMusic(){
-    music.play().catch(function(){});
-}
-
-playMusic();
-
-document.addEventListener("click", playMusic);
-document.addEventListener("touchstart", playMusic);
+document.body.onclick = function(){
+    music.play();
+};
 </script>
 
 </body>
